@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+###模版修改发布github
+    1.切换本地master 分支
+    2.合并源码  git merge source-code
+    3.hexo clean && hexo g && hexo d      // g- generate ; d-deploy
 
-You can use the [editor on GitHub](https://github.com/pszh/pszh.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### 模版使用配置 说明
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+    https://github.com/yscoder/hexo-theme-indigo/wiki/%E9%85%8D%E7%BD%AE
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pszh/pszh.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### github Pages + hexo 搭建个人博客
+    http://www.apkbus.com/blog-35555-76924.html
+    
+    http://threehao.com/2016/08/22/Github%20Pages%20+%20Hexo/
