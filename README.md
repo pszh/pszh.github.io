@@ -1,3 +1,20 @@
+### 新建页面，新建博文
+    1.新建博文
+        a. 在source/_posts 文件下放入你的.md 文件，注意title 格式
+        
+            ---
+            title: 个人博客搭建详解（Windows和Mac通用版） # 这是标题
+            tags:   # 这里写的标签会自动汇集到 tags 页面上
+            - 实用 # 可配置多个标签，注意格式
+            - 个人博客
+            category:  # 这里写的分类会自动汇集到 categories 页面上，分类可以多级
+            - 实用技术 # 一级分类
+            - 个人博客 # 二级分类 
+            ---
+
+    2.新建页面
+        a.    hexo new "博客文章文件名"
+    
 ###模版修改发布github
     1.切换本地master 分支
     2.合并源码  git merge source-code
