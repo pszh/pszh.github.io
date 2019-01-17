@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>pszh blog</title>
-  <icon>https://www.gravatar.com/avatar/3c70eb1421246ea576d211b9c06428af</icon>
+  <icon>https://www.gravatar.com/avatar/0c319d571264c053afa587386468520c</icon>
   <subtitle>subtitle</subtitle>
   <link href="/atom.xml" rel="self"/>
   
@@ -11,7 +11,7 @@
   
   <author>
     <name>pszh</name>
-    <email>peng.sizheng@gmail.com</email>
+    <email>sizheng.peng@gmail.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
