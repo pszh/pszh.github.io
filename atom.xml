@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
-  
-  
+  <title>pszh blog</title>
+  <icon>https://www.gravatar.com/avatar/3c70eb1421246ea576d211b9c06428af</icon>
+  <subtitle>subtitle</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://pszh.github.io/"/>
   <updated>2019-01-17T07:53:17.247Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://pszh.github.io/</id>
   
   <author>
-    <name>John Doe</name>
-    
+    <name>pszh</name>
+    <email>peng.sizheng@gmail.com</email>
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/01/17/hello-world/"/>
-    <id>http://yoursite.com/2019/01/17/hello-world/</id>
+    <link href="https://pszh.github.io/2019/01/17/hello-world/"/>
+    <id>https://pszh.github.io/2019/01/17/hello-world/</id>
     <published>2019-01-17T07:53:17.247Z</published>
     <updated>2019-01-17T07:53:17.247Z</updated>
     
