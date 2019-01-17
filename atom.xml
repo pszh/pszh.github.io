@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://pszh.github.io/"/>
-  <updated>2019-01-17T07:53:17.247Z</updated>
+  <updated>2019-01-17T09:47:43.228Z</updated>
   <id>https://pszh.github.io/</id>
   
   <author>
@@ -17,19 +17,23 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
+    <title>esLint</title>
     <link href="https://pszh.github.io/2019/01/17/hello-world/"/>
     <id>https://pszh.github.io/2019/01/17/hello-world/</id>
     <published>2019-01-17T07:53:17.247Z</published>
-    <updated>2019-01-17T07:53:17.247Z</updated>
+    <updated>2019-01-17T09:47:43.228Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<p>esLint 介绍</p><pre><code>团队开发    ，统一代码风格 命令介绍  https://eslint.org/docs/user-guide/command-line-interface</code></pre><p>安装 &amp; 初始化配置文件</p><p>全局安装</p><pre><code>1. npm install -g eslint2. eslint --init然后一系列的配置 </code></pre><p>本地项目 </p><pre><code>1.  npm install eslint --save-dev2.  ./node_modules/.bin/eslint --init  (需要当前项目路径)然后一系列配置</code></pre><p>配置</p><pre><code>#### eslintrc文件配置规则配置文件 ，  通过上面 init 方式配置的都是在项目最外层生成一个配置文件， （当然你也可以在package.json）官方文档 https://eslint.org/docs/user-guide/configuring{    &quot;env&quot;: {   // 指定环境        &quot;node&quot;: true,        &quot;commonjs&quot;: true,        &quot;es6&quot;: true    },    &quot;globals&quot;: { //指定全局        &quot;var1&quot;: true,        &quot;var2&quot;: false    }    &quot;plugins&quot;:{ //配置插件  先通过  npm install --save-dev eslint-plugin-react  最好在init前安装        &quot;eslint-plugin-react&quot;,    }    &quot;extends&quot;: &quot;eslint:recommended&quot;, //扩展配置文件    &quot;parserOptions&quot;: {  //指定解析器选项        &quot;ecmaVersion&quot;: 2016    },    &quot;rules&quot;: { // 配置规则  https://eslint.org/docs/rules/        &quot;indent&quot;: [            &quot;error&quot;,            &quot;tab&quot; 使用tab键        ],        &quot;linebreak-style&quot;: [            &quot;error&quot;,            &quot;unix&quot;        ],        &quot;quotes&quot;: [             &quot;error&quot;,            &quot;single&quot; 单引号        ],        &quot;semi&quot;: [             &quot;error&quot;,            &quot;always&quot; 使用分号        ]    }}</code></pre><p>部分文件忽略检测</p><p> 在 eslintrc同目录下创建 .eslintignore 文件</p><pre><code># /node_modules/* and /bower_components/* 这个是默认忽略的# Ignore built files except build/index.js  忽略build下的文件除了 index.jsbuild/*!build/index.js# 忽略 dist目录下文件dist/*</code></pre><p>手动检测代码，自动修复格式化</p><pre><code>eslint --ext src //手动检测src文件夹下的.js   --ext 默认 .js eslint --ext .js .vue src //手动检测src下的 .js .vue 文件eslint --fix src//修复大部分的格式问题</code></pre><p>结合webpack使用</p><pre><code>安装一个eslint-loader 的loader module:{      preLoaders: [ //安全起见用这个preLoaders, 如果用loaders,且使用了babel-loader，那babel-loader必须在eslint-loader之前配置            { test: /\.js$/,  loader: &quot;eslint-loader&quot;, exclude: /node_modules/}        ],          }</code></pre><p>git 代码提交前检测</p><pre><code>这个时候不得不提一下git hook了（https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90）    查看当前目录下的hook文件     cd .git/hooks &amp;&amp; ls      然后看到 很多.sample 的文件，前面对应git 钩子一些操作， 而 .sample 后缀都是未启动状态，对应的钩子要生效，需要用shell脚本把.sample去掉，如何用js去掉，这里才是重点  (⚠️必须在git仓库添加之后)</code></pre><ol><li>安装pre-commit   <pre><code>npm install pre-commit --save-dev</code></pre></li><li><p>配置package.json</p><p> 第一种//执行静态文件检查<br> “scripts”: {</p><pre><code>&quot;lint&quot;: &quot;eslint --ext .js --cache --fix src&quot;, //保证eslint在提交时会校验src目录下的js文件</code></pre><p>   },<br>   “pre-commit”: [</p><pre><code>&quot;lint&quot;,</code></pre><p>   ]<br> 第二种 //只校验提交代码<br> “scripts”: {</p><pre><code>&quot;lint&quot;: &quot;eslint src --ext .js --cache --fix&quot;,&quot;pre-lint&quot;: &quot;node check.js&quot;//https://www.jianshu.com/p/072a96633479</code></pre><p> },<br> “pre-commit”: [</p><pre><code>&quot;pre-lint&quot;,</code></pre><p> ]</p></li></ol><p>制定自己的规则</p><p><a href="https://eslint.org/docs/user-guide/command-line-interface" target="_blank" rel="noopener">https://eslint.org/docs/user-guide/command-line-interface</a></p><p>其他的配置</p><ol><li>standardjs：<a href="https://standardjs.com/readme-zhcn.html" target="_blank" rel="noopener">https://standardjs.com/readme-zhcn.html</a>     （集成度很好 ，包括git hook）</li><li>prettier：<a href="https://zhuanlan.zhihu.com/p/34188596" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/34188596</a></li></ol>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+        &lt;p&gt;esLint 介绍&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;团队开发    ，统一代码风格 
+
+命令介绍  https://eslint.org/docs/user-guide/command-line-interface
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;安装 &amp;amp; 初始化配置
       
     
     </summary>
