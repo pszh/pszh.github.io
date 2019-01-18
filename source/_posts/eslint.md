@@ -1,7 +1,7 @@
 ---
 title: esLint
-tags: #eslint 
-category: #web
+tags: [eslint]
+categories: Web
 ---
 ### esLint 介绍
 

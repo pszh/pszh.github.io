@@ -4,10 +4,8 @@
         
             ---
             title: 个人博客搭建详解（Windows和Mac通用版） # 这是标题
-            tags:   # 这里写的标签会自动汇集到 tags 页面上
-            - 实用 # 可配置多个标签，注意格式
-            - 个人博客
-            category:  # 这里写的分类会自动汇集到 categories 页面上，分类可以多级
+            tags: [eslint,laa]  
+            categories:   这里写的分类会自动汇集到 categories 页面上，分类可以多级  
             - 实用技术 # 一级分类
             - 个人博客 # 二级分类 
             ---
@@ -20,7 +18,7 @@
     2.合并源码  git merge source-code
     3.hexo clean && hexo g && hexo d      // g- generate ; d-deploy
 
-### 模版使用配置 说明
+### 当前模版使用配置 说明
 
     https://github.com/yscoder/hexo-theme-indigo/wiki/%E9%85%8D%E7%BD%AE
 

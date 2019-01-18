@@ -1,7 +1,7 @@
 ---
 title: Node 常用命令 与版本控制
-tags: #node npm
-category: #web
+tags: [node,npm]
+categories: Web
 ---
 ### Node 常用命令
 
